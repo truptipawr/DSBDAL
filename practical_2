@@ -6,23 +6,19 @@ a = np.array([
     [200,250,220,270],
     [80,90,70,100]
 ])
-#1
+#1 Determine the number of dimensions of the array.
 a.shape
 (5, 4)
 
-#2
+#2 Identify the data type of elements in the array.
 a.dtype
 dtype('int32')
 
-#3
-a.size
-20
-
-#4
+#3 Find the total memory (in bytes) used by the array.
 a.nbytes
 80
 
-#5
+#4 Add 20 units of stock to all products across all locations.
 a+20
 array([[120, 220, 170, 320],
        [ 70,  80,  60, 100],
@@ -30,16 +26,16 @@ array([[120, 220, 170, 320],
        [220, 270, 240, 290],
        [100, 110,  90, 120]])
 
-#6
+#5 Deduct 10 units of stock from Product 3 across all locations.
 a[2]-10
 array([290, 390, 340, 490])
 
-#7
+#6 Double the stock of all products at Location 2 (column 2).
 a[:,1]*2
 array([400, 120, 800, 500, 180])
 
 
-#8
+#7 Calculate the percentage of stock available for each product at all locations, assuming the maximum capacity of each location is 1000 units.
 max_capacity = 1000
 (a/ max_capacity) * 100
 array([[10., 20., 15., 30.],
@@ -48,35 +44,35 @@ array([[10., 20., 15., 30.],
        [20., 25., 22., 27.],
        [ 8.,  9.,  7., 10.]])
 
-#10
+#8 Calculate the total stock of each product across all locations.
 np.sum(a,axis = 1)
 array([ 750,  230, 1550,  940,  340])
 
-#11
+#9
 np.sum(a,axis = 0)
 array([ 730, 1000,  830, 1250])
 
-#12
+#11
 np.max(a,axis = 0)
 array([300, 400, 350, 500])
 
-#13
+#12
 np.min(a,axis = 1)
 array([100,  40, 300, 200,  70])
 
-#14
+#13
 np.mean(a,axis = 1)
 array([187.5,  57.5, 387.5, 235. ,  85. ])
 
-#15
+#14
 a[1]
 array([50, 60, 40, 80])
 
-#16
+#15
 a[:,3]
 array([300,  80, 500, 270, 100])
 
-#17
+#16
 a[0:3,0:2]
 array([[100, 200],
        [ 50,  60],
